@@ -1,0 +1,124 @@
+.stats {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0;
+}
+
+.stats__bg-pattern {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(46, 134, 171, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(201, 168, 76, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.stats__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.stats__header {
+  margin-bottom: 4rem;
+}
+
+.stats__header .section-title {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+}
+
+.stats__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+
+.stats__item {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+}
+
+.stats__item:last-child {
+  border-right: none;
+}
+
+.stats__item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  opacity: 0;
+  transition: opacity var(--transition-med);
+}
+
+.stats__item:hover::before {
+  opacity: 1;
+}
+
+.stats__number {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.stats__count {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1;
+}
+
+.stats__suffix {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-gold-light);
+}
+
+.stats__label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.02em;
+}
+
+.stats__desc {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats__item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    border-right: none;
+    padding: 2rem 1.5rem;
+  }
+
+  .stats__item:nth-child(odd) {
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .stats__item:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,240 @@
+.management {
+  background: var(--color-gray-50);
+  padding-bottom: 3rem;
+}
+
+.management__header {
+  margin-bottom: 3.5rem;
+}
+
+.management__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  justify-items: center;
+}
+
+/* Carousel */
+.management__carousel {
+  position: relative;
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.management__carousel-overflow {
+  overflow: hidden;
+  width: 100%;
+}
+
+.management__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  color: var(--color-navy);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.management__arrow:hover {
+  background: var(--color-gold);
+  color: var(--color-white);
+  border-color: var(--color-gold);
+}
+
+.management__arrow--prev { left: 0; }
+.management__arrow--next { right: 0; }
+
+.management__carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.management__carousel-track .team-card {
+  min-width: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.management__slide {
+  min-width: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.75rem;
+  box-sizing: border-box;
+}
+
+.management__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.management__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-gray-200);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all var(--transition-fast);
+}
+
+.management__dot--active {
+  background: var(--color-gold);
+  width: 24px;
+  border-radius: var(--radius-full);
+}
+
+.team-card {
+  background: var(--color-white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-100);
+  transition: all var(--transition-med);
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+}
+
+.team-card__avatar {
+  position: relative;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.team-card__avatar img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.team-card__initials {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.05em;
+  z-index: 1;
+}
+
+.team-card__avatar-ring {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.team-card__body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.team-card__name {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1.2;
+}
+
+.team-card__title {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.2rem 0.6rem;
+  background: rgba(7, 176, 192, 0.1);
+  border-radius: var(--radius-full);
+  width: fit-content;
+}
+
+.team-card__bio {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  line-height: 1.65;
+  margin-top: 0.25rem;
+}
+
+.team-card__readmore {
+  background: none;
+  border: none;
+  color: var(--color-gold);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-top: 0.25rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: opacity var(--transition-fast);
+}
+
+.team-card__readmore:hover {
+  opacity: 0.75;
+}
+
+@media (max-width: 1024px) {
+  .management__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .management__carousel {
+    padding: 0 1rem;
+  }
+
+  .management__carousel-track .team-card {
+    min-width: 82%;
+    width: 82%;
+  }
+
+  .management__carousel-overflow {
+    overflow: visible;
+  }
+
+  .management__carousel {
+    overflow: hidden;
+  }
+
+  .team-card__avatar {
+    height: 220px;
+  }
+}

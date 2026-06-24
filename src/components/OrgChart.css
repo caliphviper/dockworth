@@ -1,0 +1,208 @@
+.org-chart-section {
+  background: var(--color-navy);
+  overflow: hidden;
+}
+
+.org-chart__header {
+  margin-bottom: 3.5rem;
+}
+
+.org-chart__header .section-title,
+.org-chart__header .section-subtitle {
+  color: var(--color-white);
+}
+
+.org-chart__header .section-subtitle {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* Tree wrapper */
+.org-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+/* Node */
+.org-node {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.65rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.5s ease;
+  cursor: default;
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.org-node.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.org-node--l1 {
+  background: var(--color-gold);
+  color: var(--color-navy);
+  font-size: 0.95rem;
+  padding: 0.75rem 2rem;
+  box-shadow: 0 4px 24px rgba(7, 176, 192, 0.35);
+}
+
+.org-node--l2 {
+  background: rgba(7, 176, 192, 0.15);
+  border: 2px solid var(--color-gold);
+  color: var(--color-white);
+  font-size: 0.875rem;
+  box-shadow: 0 2px 16px rgba(7, 176, 192, 0.2);
+}
+
+.org-node--l3 {
+  background: rgba(7, 176, 192, 0.12);
+  border: 1.5px solid rgba(7, 176, 192, 0.5);
+  color: var(--color-gold);
+  font-size: 0.78rem;
+  box-shadow: 0 2px 10px rgba(7, 176, 192, 0.15);
+}
+
+.org-node--l4 {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.72rem;
+  padding: 0.5rem 1rem;
+}
+
+.org-node:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 28px rgba(7, 176, 192, 0.35);
+  z-index: 1;
+}
+
+/* Connectors */
+.org-connector {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.org-connector.visible {
+  opacity: 1;
+}
+
+.org-connector--single {
+  width: 2px;
+  height: 32px;
+  background: linear-gradient(to bottom, var(--color-gold), rgba(7, 176, 192, 0.4));
+  margin: 0 auto;
+}
+
+/* 4-branch spread connector — no longer used as row, kept for mobile fallback */
+.org-connector--branch {
+  display: none;
+}
+
+/* 2-branch connector inside departments */
+.org-connector--branch-2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  position: relative;
+  height: 36px;
+}
+
+.org-connector--branch-2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background: linear-gradient(to right, rgba(7,176,192,0.3), var(--color-gold), rgba(7,176,192,0.3));
+}
+
+.org-connector--branch-2 span {
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--color-gold), rgba(7, 176, 192, 0.4));
+  display: block;
+}
+
+/* Level row */
+.org-level {
+  display: flex;
+  justify-content: center;
+}
+
+.org-level--departments {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 900px;
+  align-items: start;
+  position: relative;
+}
+
+.org-level--departments::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: calc(12.5% + 1px);
+  right: calc(12.5% + 1px);
+  height: 2px;
+  background: linear-gradient(to right, rgba(7,176,192,0.3), var(--color-gold), rgba(7,176,192,0.3));
+}
+
+.org-dept {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.org-level--sub {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+  .org-level--departments {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 560px;
+  }
+
+  .org-level--departments::before {
+    left: calc(25% + 1px);
+    right: calc(25% + 1px);
+  }
+}
+
+@media (max-width: 640px) {
+  .org-level--departments {
+    grid-template-columns: 1fr;
+    max-width: 280px;
+  }
+
+  .org-level--departments::before {
+    display: none;
+  }
+
+  .org-node {
+    white-space: normal;
+    width: 100%;
+  }
+
+  .org-level--sub {
+    grid-template-columns: 1fr;
+  }
+}
