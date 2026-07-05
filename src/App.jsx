@@ -10,6 +10,7 @@ import OrgChart from './components/OrgChart';
 import History from './components/History';
 import Gallery from './components/Gallery';
 import Scope from './components/Scope';
+import HSEPolicy from './components/HSEPolicy';
 import Clients from './components/Clients';
 import Partners from './components/Partners';
 import Contact from './components/Contact';
@@ -27,12 +28,13 @@ function App() {
         <Stats />
         <Services />
         <WhyUs />
-        <Certificates />
+         
         <Management />
-        <OrgChart />
+        
         <History />
         <Gallery />
         <Scope />
+        <HSEPolicy />
         <Clients />
         <Partners />
         <Contact />

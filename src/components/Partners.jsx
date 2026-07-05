@@ -4,14 +4,14 @@ import logo1 from '../assets/logo 1.png';
 import logo2 from '../assets/logo 2.png';
 import logo3 from '../assets/logo 3.png';
 import logo4 from '../assets/logo 4.png';
-import logo5 from '../assets/logo 5.png';
+
 
 const partners = [
   { id: 1, name: 'Partner 1', logo: logo1 },
   { id: 2, name: 'Partner 2', logo: logo2 },
   { id: 3, name: 'Partner 3', logo: logo3 },
   { id: 4, name: 'Partner 4', logo: logo4 },
-  { id: 5, name: 'Partner 5', logo: logo5 },
+  
 ];
 
 export default function Partners() {

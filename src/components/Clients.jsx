@@ -144,32 +144,7 @@ export default function Clients() {
         </div>
       </div>
 
-      {/* Testimonials */}
-      <div className="container">
-        {isMobile ? (
-          <div className="clients__carousel">
-            <div
-              className="clients__carousel-track"
-              style={{ transform: `translateX(-${current * 100}%)` }}
-              onTouchStart={handleTouchStart}
-              onTouchEnd={handleTouchEnd}
-            >
-              {cards}
-            </div>
-            <div className="clients__dots">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  className={`clients__dot${i === current ? ' clients__dot--active' : ''}`}
-                  onClick={() => setCurrent(i)}
-                />
-              ))}
-            </div>
-          </div>
-        ) : (
-          <div className="clients__testimonials">{cards}</div>
-        )}
-      </div>
+     
     </section>
   );
 }
