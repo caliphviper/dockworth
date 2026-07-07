@@ -70,7 +70,7 @@ export default function Hero() {
 
         <p className="hero__description">
           Dockworth Services International Limited delivers world class maritime solutions
-          from port agency and ship cargo handling to offshore support and services with over two decades of
+          from port agency and ship cargo handling to offshore support services with over two decades of
           trusted performance across Nigerian and West African waters.
         </p>
 
@@ -107,8 +107,8 @@ export default function Hero() {
           </div>
           <div className="hero__stat-divider" />
           <div className="hero__stat">
-            <span className="hero__stat-number">0</span>
-            <span className="hero__stat-label">Ports Served</span>
+            <span className="hero__stat-number">15</span>
+            <span className="hero__stat-label">Active Clients</span>
           </div>
           
         </div>

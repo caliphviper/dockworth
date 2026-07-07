@@ -4,7 +4,7 @@ import './Stats.css';
 const stats = [
   { number: 25, suffix: '+', label: 'Years of Operation', desc: 'Trusted since the early 2000s' },
   { number: 20, suffix: '+', label: 'Projects Completed', desc: 'Vessel calls, cargo movements & more' },
-  { number: 0, suffix: '+', label: 'Active Ports Served', desc: 'Across Nigeria and West Africa' },
+  { number: 15, suffix: '+', label: 'Active Clients', desc: 'Across Nigeria and West Africa' },
   { number: 15, suffix: '+', label: 'Companies', desc: 'Across Nigeria and West Africa' },
   
   
