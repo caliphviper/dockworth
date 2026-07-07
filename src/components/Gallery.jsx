@@ -1,11 +1,19 @@
 import { useEffect, useRef, useState } from 'react';
 import './Gallery.css';
+import newGallery1 from '../assets/New Gallery img 1.png';
+import newGallery2 from '../assets/New Gallery img 2.png';
+import newGallery3 from '../assets/New Gallery img 3.png';
+import newGallery4 from '../assets/New Gallery img 4.png';
 
 const galleryItems = [
-  { src: '/hero-maritime.png', caption: 'Container operations at Lagos Port', span: 'wide' },
-  { src: '/gallery-offshore.png', caption: 'Offshore supply vessel operations', span: 'tall' },
-  { src: '/gallery-chandling.png', caption: 'Ship chandling – loading provisions', span: 'normal' },
-  { src: '/about-team.png', caption: 'Our operations team at work', span: 'normal' },
+  { src: '/hero-maritime.png',      caption: 'Container operations at Lagos Port',    span: 'wide' },
+  { src: '/gallery-offshore.png',   caption: 'Offshore supply vessel operations',      span: 'tall' },
+  { src: '/gallery-chandling.png',  caption: 'Ship chandling – loading provisions',    span: 'normal' },
+  { src: '/about-team.png',         caption: 'Our operations team at work',            span: 'normal' },
+  { src: newGallery1,               caption: 'Maritime operations',                    span: 'wide' },
+  { src: newGallery2,               caption: 'Port activities',                        span: 'normal' },
+  { src: newGallery3,               caption: 'Offshore operations',                    span: 'tall' },
+  { src: newGallery4,               caption: 'Vessel services',                        span: 'normal' },
 ];
 
 export default function Gallery() {
