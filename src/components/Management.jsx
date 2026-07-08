@@ -34,13 +34,14 @@ const team = [
     bio: 'An enthusiastic Maritime Professional with 40+ years of experience. Skilled in Offshore Terminal Management, Tanker clearance, Ship handling, SPM and Tandem Mooring, Crude Oil and Gas Export System Management, and Marine Navigation. Previously Senior Mooring Master at Chevron Nigeria Limited.',
     color: '#07b0c0',
   },
+    
   {
     id: 'maritime',
     initials: 'EM',
     name: 'Mr. Emmanuel Maiguwa Gankino',
     title: 'Maritime Expert',
     bio: 'Founder and CEO with over 21 years of experience in Ship Management, Maritime Security, ISM code, Ports Operations and International Shipping. Serving President of the Maritime Security Providers\' Association of Nigeria (MASPAN) and President of the Alumni of Maritime Academy of Nigeria Oron (AMANO).',
-    color: '#058a97',
+    color: '#051497',
   },
   {
     id: 'ed-pt',
@@ -49,6 +50,30 @@ const team = [
     title: 'Executive Director - Ports & Terminals Operations',
     bio: 'Alumni of University of Wales, Cardiff, with B.Sc. in International Studies and M.Sc. Maritime Studies specialising in Ports & Shipping. Appointed General Manager, Managing Director\'s Office in 2023, overseeing port management and Export Processing Terminals operations.',
     color: '#0A1628',
+  },
+  {
+    id: 'qhse-mgr',
+    initials: 'EJ',
+    name: 'Mr. Elijah Ekpe J.',
+    title: 'QHSE Manager',
+    bio: 'A seasoned QHSE professional with over 15 years of experience across EPC projects, upstream oil and gas, marine, construction, and manufacturing industries. Certified QHSE Lead Auditor, authorized OSHAcademy USA trainer in Nigeria, and member of the Institute of Safety Professionals of Nigeria. Winner of the prestigious AFRISafe Award for outstanding contributions to health, safety, quality, and wellbeing.',
+    color: '#1B4F8A',
+  },
+  {
+    id: 'field-eng-1',
+    initials: 'SU',
+    name: 'Mr. Sunday Nnah Udoka',
+    title: 'Field Engineer 1',
+    bio: 'A highly experienced Marine and Mechanical Engineer with over 20 years of expertise in offshore and onshore oil and gas operations. Specializes in Single Point Mooring (SPM) systems, marine hose management, subsea engineering logistics, offshore rigging, and asset integrity management. Has held key positions with SPDC (Bonga FPSO and Sea Eagle FPSO), Nigerian Agip Oil Company, and SPDC Bonny Terminal.',
+    color: '#2E86AB',
+  },
+  {
+    id: 'field-eng-2',
+    initials: 'CD',
+    name: 'Mr. Clifford Tamuno-Ibime Dexterity',
+    title: 'Field Engineer 2',
+    bio: 'A Petroleum Engineer with over six years of experience in oil and gas, subsea engineering, project management, process instrumentation, quality assurance, logistics, and CNG operations. Holds an M.Tech and B.Eng in Petroleum Engineering from Rivers State University and the University of Port Harcourt respectively. Graduate Member of the Nigerian Society of Engineers and published researcher in drilling fluids and nanoparticle applications.',
+    color: '#07b0c0',
   },
 ];
 

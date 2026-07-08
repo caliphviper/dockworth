@@ -188,8 +188,10 @@
 .team-card__bio {
   font-size: 0.85rem;
   color: var(--color-text-light);
-  line-height: 1.65;
+  line-height: 1.7;
   margin-top: 0.25rem;
+  text-align: left;
+  word-spacing: -0.01em;
 }
 
 .team-card__readmore {
