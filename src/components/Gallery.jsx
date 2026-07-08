@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import './Gallery.css';
-import newGallery1 from '../assets/New Gallery img 1.png';
-import newGallery2 from '../assets/New Gallery img 2.png';
+import newGallery1 from '../assets/New Gallery img 1.PNG';
+import newGallery2 from '../assets/New Gallery img 2.PNG';
 import newGallery3 from '../assets/New Gallery img 3.png';
 import newGallery4 from '../assets/New Gallery img 4.png';
 
