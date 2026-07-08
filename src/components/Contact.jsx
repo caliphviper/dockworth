@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const contactInfo = [
@@ -90,11 +91,23 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setStatus('sending');
-    // Simulate async send
-    setTimeout(() => {
-      setStatus('success');
-      setForm({ name: '', email: '', company: '', service: '', message: '' });
-    }, 1500);
+    emailjs.send(
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      {
+        from_name: form.name,
+        from_email: form.email,
+        company: form.company,
+        service: form.service,
+        message: form.message,
+      },
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+    )
+      .then(() => {
+        setStatus('success');
+        setForm({ name: '', email: '', company: '', service: '', message: '' });
+      })
+      .catch(() => setStatus('error'));
   };
 
   return (
@@ -145,6 +158,12 @@ export default function Contact() {
         <div className="contact__form-col fade-in-right">
           <div className="contact__form-card">
             <h3 className="contact__form-title">Send Us a Message</h3>
+            {status === 'error' && (
+              <div className="contact__error">
+                Something went wrong. Please try again or email us directly.
+                <button className="btn btn--outline" onClick={() => setStatus('idle')}>Try Again</button>
+              </div>
+            )}
             {status === 'success' ? (
               <div className="contact__success">
                 <div className="contact__success-icon">

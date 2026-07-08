@@ -18,14 +18,7 @@ const team = [
     bio: 'Over 20 years of experience in maritime operations. Holds a Master\'s Degree in Transportation Management from the World Maritime University. Has played a significant role in repositioning the company\'s service delivery through continuous improvement, training, innovation and strict compliance with safety regulations.',
     color: '#1B4F8A',
   },
-  {
-    id: 'ed-bd',
-    initials: 'EO',
-    name: 'Barr. Efioita Okon Ephraim',
-    title: 'Executive Director - Business Development',
-    bio: 'Holds an OND in Estate Management, B.Sc. in Economics, PGD in Port and Shipping Management, M.Sc. in Transport, LLB and BL. Served at the Nigerian Ports Authority for 35 years, retiring as General Manager, and later served as General Manager at Ports and Terminal Operators Nigeria Ltd.',
-    color: '#2E86AB',
-  },
+  
   {
     id: 'ed-me',
     initials: 'PO',
